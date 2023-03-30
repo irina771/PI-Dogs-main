@@ -1,0 +1,70 @@
+body{
+    background-color: rgb(253, 198, 216); 
+    background-size: cover; 
+}
+
+.FormContainer {
+    background-color: #e48ab4;
+    border: 2px solid #f3ddddc2;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    height: 80%;
+    width: 60%;
+    left: 18%;
+    border-radius: 30px;
+}
+
+.titulo {
+    margin-bottom: 70px;
+}
+
+.label{
+    margin-bottom: 0vw;
+    padding-top: 1em;
+}
+
+.btnHome {
+    margin-bottom: 2vw;
+    margin-top: 1vw;
+    font-size: 1.2vw;
+    padding: 0.5vw 1vw;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background-color: rgb(184, 79, 114);
+    border: none;
+    border-radius: 10px;
+}
+.temperaments {
+    margin-bottom: 2vw;
+    margin-top: 1vw;
+    font-size: 1.2vw;
+    padding: 0.5vw 1vw;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background-color: rgb(184, 79, 114);
+    border: none;
+    border-radius: 10px;
+}
+
+
+.crear {
+    font-size: 1.0vw;
+    padding: 0.5vw 1vw;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background-color: rgb(184, 79, 114);
+    border: none;
+    border-radius: 10px;
+    margin-bottom: -20px;
+}
+@media (max-width: 768px) {
+  .FormContainer {
+    height: 100%;
+    width: 100%;
+    left: 0;
+  }
+}

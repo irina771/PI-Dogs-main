@@ -1,0 +1,37 @@
+.card-text {
+  font-size: 14.3px;
+  text-decoration: none;
+  background-color: #36122d;
+  height: 430px;
+  border-radius: 10px;
+  color: rgb(255, 253, 253);
+}
+
+.letra {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color:#f3b5ca;
+  border-radius: 0.5em;
+  color: black;
+  margin: 10px;
+  margin-top: 4px;
+  height: 198px;
+  overflow: hidden;
+}
+img {
+  width: 280px;
+  height: 178px;
+  border-radius: 2px;
+}
+
+.card-text:hover * {
+  color: rgb(247, 114, 158);
+}
+
+
+
+@media only screen and (max-width: 1280px) {
+  img {
+    width: 245px;
+    border-radius:4px;
+  }
+}

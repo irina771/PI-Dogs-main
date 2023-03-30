@@ -1,0 +1,87 @@
+.background {
+    background-color: #fdc6d8;
+    background-size: cover; 
+}
+
+.cardContainer{
+    display: flex;
+    /* grid-template-columns: repeat(4, 1fr); */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e48ab4;
+    padding: 30px 60px;
+    border-radius: 10px;
+    }
+
+    .card {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 19px;
+        margin: 10px;
+        text-align: center;
+
+        box-shadow: 0px 1px 5px 3px rgba(252, 222, 222, 0.856);
+    }
+      .name {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+      }
+      .name:hover {
+        color: rgb(255, 255, 255);
+      }
+      .paginationContainer {
+        font-size: 1em;
+        padding: 1em 0.5vw;
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+       
+        border: none;
+        border-radius: 30px;
+        position: absolute;
+        right: 32%;
+      }
+      .pagination {
+        background-color: #e48ab4;
+        padding: 10px;
+        padding-left: 70px;
+        padding-right: 100px;
+        border-radius: 1em;
+        
+      }
+      
+      
+      .pagination button {
+        font-size: 17px;
+        margin-right: -5px; /* Ajusta los márgenes */
+        margin-left: 35px; /* Ajusta los márgenes */
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+        background-color: rgb(184, 79, 114);
+      }
+      
+      
+.nav{
+  background-color: #36122d;
+  display: flex;
+  justify-content: center;
+}
+.btn{
+  position: relative;
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 6px;
+  margin-bottom: -15px;
+  left: 300%;
+  top: -40%;
+  background-color: rgb(255, 230, 239);
+  color: black;
+  border-radius: 10%;
+}
+
+@media only screen and (max-width: 1280px) {
+  .btn{
+    left: 290%;
+  }
+
+}
