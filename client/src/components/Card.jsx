@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../styles/cardComponent.css";
 
 export default function Card({ name, image, temperament, weight }) {
+  console.log(image);
   return (
     <div>
       <div className={`homeCard`}>

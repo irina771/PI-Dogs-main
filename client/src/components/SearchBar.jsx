@@ -4,7 +4,7 @@ import { getByName } from "../redux/actions/index";
 import { useHistory } from "react-router-dom";
 import styles from '../styles/SearchBar.module.css'
 
-export default function SearchBar() {
+export default function SearchBar({setCurrentPage}) {
   const dispatch = useDispatch();
   const history = useHistory();
   const [name, setName] = useState("");
@@ -19,6 +19,7 @@ export default function SearchBar() {
     if (name) {
       dispatch(getByName(name));
       setName("");
+      setCurrentPage(1);
     }
   }
 

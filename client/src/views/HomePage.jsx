@@ -50,7 +50,7 @@ const HomePage = () => {
     <div className={styles.background}>
       <nav className={styles.nav}>
         <div>
-          <SearchBar />
+          <SearchBar setCurrentPage={setCurrentPage}/>
           <Link to="/createDog">
             <button className={styles.btn}>Crear Perrito</button>
           </Link>

@@ -30,6 +30,10 @@ module.exports = (sequelize) => {
       primaryKey: true,
       allowNull:true
     },
+    createdInDb: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: true,
+    }
   },
     {
       timestamps: false,

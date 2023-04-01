@@ -112,6 +112,7 @@ const CreateDog = () => {
   };
 
   const handleSubmit = (e) => {
+    if (!completed.name) alert("El nombre del perro es requerido");
     console.log(finalForm)
     e.preventDefault();
     const errors = validate(completed);
@@ -235,6 +236,7 @@ const CreateDog = () => {
             {errors.temperaments ? <label>{errors.temperaments}</label> : null}
             <div className={styles.button} create={create}>
               {!create ? (
+                
              <button onClick={(e) => handleSubmit(e)} className={styles.crear} type="submit">Crear</button>
               ) : (
                 <Link onClick={() => dispatch(getDogs())} to="/home">

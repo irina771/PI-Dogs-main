@@ -60,7 +60,13 @@
         background-color: rgb(184, 79, 114);
       }
       
-      
+      .image {
+         background-image: url('../assets/perroTriste.webp');
+         height: 300px;
+         width: 300px;
+         margin-left: 140%;
+        background-size: cover; 
+      }
 .nav{
   background-color: #36122d;
   display: flex;

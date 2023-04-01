@@ -1,26 +1,32 @@
 .detalleBackground{
     min-height: 100vh;
     min-height: 100vh;
-    /* background: bisque; */
-    background-color: rgb(253, 198, 216);
     height: 90%;
     width: 95%;
-    background-size: cover;
+   
 }
 
 .detailName {
-    font-size: 2em;
+    margin-top: 10px;
+    font-size: 3em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
   }
-  
+
+
   .imagen {
     width: 300px;
-    height: 225px;
+    height: 250px;
   }
   
 .stats {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+    background-color: rgb(204, 108, 148);
+    margin-top: 20px;
   }
   
   .stats span {
@@ -34,7 +40,7 @@
     text-decoration: none;
 }
 .botones {
-    font-size: 1.0vw;
+    font-size: 1.5vw;
     padding: 0.5vw 0.5vw;
     cursor: pointer;
     color: rgb(255, 255, 255);
@@ -53,14 +59,16 @@
 }
 
 .Detail {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 2px solid rgb(204, 108, 148);
-    padding: 20px;
-    background-color: rgb(204, 108, 148);
-    width: 60%;
-    margin: 0 auto;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid rgb(204, 108, 148);
+  padding: 30px;
+  background-color: #36122d;
+  width: 50%;
+  margin: 0 auto;
+  margin-right: 260px;
+}
+
   
   

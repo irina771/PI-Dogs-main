@@ -11,20 +11,20 @@ export default function Detail() {
   // Tengo que crear una accion para que no me cargue por error otra imagen previamente
   useEffect(() => {
     dispatch(getDetail(id));
-    }, [dispatch, id]);
+  }, [dispatch, id]);
 
-    console.log("dogDeits", DogDeits);
+  console.log("dogDeits", DogDeits);
   return (
     <div className={styles.detalleBackground}>
       <nav>
         <div className={styles.btnContainer}>
-          <button className={styles.botones} style={{ marginBottom: '20px' }}>
+          <button className={styles.botones} style={{ marginBottom: "20px" }}>
             <Link className={styles.detalleBtn} to="/createDog">
               Crear Perritos
             </Link>
           </button>
 
-          <button className={styles.botones} style={{ marginRight: '50px' }}>
+          <button className={styles.botones} style={{ marginRight: "50px" }}>
             <Link className={styles.detalleBtn} to="/home">
               Regresar
             </Link>
@@ -45,7 +45,8 @@ export default function Detail() {
                 className={styles.imagen}
                 src={DogDeits.image}
                 alt={DogDeits.name}
-                width="200" height="150"
+                width="200"
+                height="150"
               />
             </div>
             <div>
@@ -54,7 +55,11 @@ export default function Detail() {
                 <span>Nombre: {DogDeits.name}</span>
                 <span>Peso: {DogDeits.weight}</span>
                 <span>Altura: {DogDeits.height}</span>
-                <span>Temperamentos: {DogDeits.temperament}</span>
+                {DogDeits.createdInDb ? (
+                  <span>Temperamentos: {DogDeits.temperaments}</span>
+                ) : (
+                  <span>Temperamentos: {DogDeits.temperament}</span>
+                )}
                 <span>Años de vida: {DogDeits.life_span}</span>
               </div>
             </div>
