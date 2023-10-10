@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.516286dd.chunk.css",
+    "main.js": "/static/js/main.1fab7cba.chunk.js",
+    "main.js.map": "/static/js/main.1fab7cba.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.3ed79608.js",
+    "runtime-main.js.map": "/static/js/runtime-main.3ed79608.js.map",
+    "static/js/2.9fd6f5ea.chunk.js": "/static/js/2.9fd6f5ea.chunk.js",
+    "static/js/2.9fd6f5ea.chunk.js.map": "/static/js/2.9fd6f5ea.chunk.js.map",
+    "static/js/3.cf32ff70.chunk.js": "/static/js/3.cf32ff70.chunk.js",
+    "static/js/3.cf32ff70.chunk.js.map": "/static/js/3.cf32ff70.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.516286dd.chunk.css.map": "/static/css/main.516286dd.chunk.css.map",
+    "static/js/2.9fd6f5ea.chunk.js.LICENSE.txt": "/static/js/2.9fd6f5ea.chunk.js.LICENSE.txt",
+    "static/media/landing.css": "/static/media/dogLanding.fb809177.jpg",
+    "static/media/Home.module.css": "/static/media/perroTriste.01194748.webp"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3ed79608.js",
+    "static/js/2.9fd6f5ea.chunk.js",
+    "static/css/main.516286dd.chunk.css",
+    "static/js/main.1fab7cba.chunk.js"
+  ]
+}
