@@ -8,7 +8,7 @@ import {store} from './redux/store/index';
 import axios from 'axios';
 
 //axios.defaults.baseURL = "http://localhost:3001";
-axios.defaults.baseURL = "https://dog-api-production-68f5.up.railway.app/";
+axios.defaults.baseURL = "https://dog-a1arips94-irina771.vercel.app/";
 
 ReactDOM.render(
 
