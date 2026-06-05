@@ -1,0 +1,31 @@
+.filterContainer {
+    display: inline-block;
+    position: relative;
+    top: 64%;
+  }
+  
+  .filter {
+    display: flex;
+    background-color: rgb(255, 230, 239);
+    color: rgb(0, 14, 26);
+    border-radius: 7%;
+    padding-top: 2px;
+  }
+  
+  /* Estilos para pantallas más pequeñas */
+  @media only screen and (max-width: 1280px) {
+    .filterContainer {
+    position: relative;
+      display: inline-block;
+      margin-bottom: 0px;
+    }
+    
+    .filter {      
+      display: flex;
+      background-color: rgb(255, 230, 239);
+      text-align: center;
+      border-radius: 6px;
+      padding: 2px;
+    }
+  }
+  

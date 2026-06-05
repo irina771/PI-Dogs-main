@@ -1,0 +1,123 @@
+.card-text {
+  font-size: 14.3px;
+  text-decoration: none;
+  background-color: #36122d;
+  height: 410px;
+  border-radius: 5px;
+  color: rgb(255, 253, 253);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-text:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.letraTitulo {
+  padding: 8px;
+  text-align: center;
+  min-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.letraTitulo h3 {
+  margin: 0;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.card-text > div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 180px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
+  object-fit: cover;
+}
+
+.letra {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: #f0becf;
+  border-radius: 0;
+  color: black;
+  margin: 0;
+  padding: 3px;
+  flex-grow: 2;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.letra h4 {
+  margin: 5px 0;
+  font-size: 13px;
+}
+
+.letra p {
+  margin: 3px 0;
+  font-size: 12px;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+
+/* Responsive para tablets y pantallas medianas */
+@media only screen and (max-width: 1280px) {
+  .card-text {
+    height: 380px;
+  }
+  
+  .card-text > div:nth-child(2) {
+    height: 170px;
+  }
+  
+  .letraTitulo h3 {
+    font-size: 15px;
+  }
+}
+
+/* Responsive para pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+  .card-text {
+    height: 350px;
+  }
+  
+  .card-text > div:nth-child(2) {
+    height: 150px;
+  }
+  
+  .letraTitulo h3 {
+    font-size: 14px;
+  }
+  
+  .letra h4 {
+    font-size: 12px;
+  }
+  
+  .letra p {
+    font-size: 11px;
+  }
+}
