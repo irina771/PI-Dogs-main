@@ -22,7 +22,7 @@ router.get("/", async (req, res) => {
       if (result.length >= 1) {
         res.status(200).json(result);
       } else {
-        throw new Error(error);
+        throw new Error("Dog not found");
       }
     } catch (error) {
       res.status(400).json(error);
@@ -33,8 +33,9 @@ router.get("/", async (req, res) => {
     try {
       let total = await dogsTOTALinfo();
       res.status(200).json(total);
-    } catch (error) {
-      res.status(400).json("error en buscar al perro por raza");
+    }catch (error) {
+      console.error(error);
+      res.status(400).json(error.message);
     }
   }
 });
@@ -42,54 +43,48 @@ router.get("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
   const { id } = req.params;
 
-  if (id.includes("-")) {
-    try {
+  try {
+    // Si es un UUID, buscar en la BD
+    if (id.includes("-")) {
       let dogDB = await Dog.findOne({
-        where: {
-          id: id,
-        },
+        where: { id },
         include: Temperament,
       });
-      dogDB = JSON.stringify(dogDB);
-      dogDB = JSON.parse(dogDB);
 
-      dogDB.temperaments = dogDB.temperaments.map((d) => d.name + ", ");
-      res.json(dogDB);
-    } catch (err) {
-      res
-        .status(500)
-        .json({ message: "Error al obtener la raza de la base de datos" });
+      if (!dogDB) {
+        return res.status(404).json({
+          message: "Dog not found",
+        });
+      }
+
+      dogDB = JSON.parse(JSON.stringify(dogDB));
+
+      dogDB.temperaments = dogDB.temperaments
+      .map((temp) => temp.name);
+
+      return res.status(200).json(dogDB);
     }
-  } else {
-    try {
-      const response = await axios.get(
-        `https://api.thedogapi.com/v1/breeds/${id}`
+
+    // Buscar en la API usando la lista completa
+    const dogs = await dogsAPIinfo();
+        const dog = dogs.find(
+        (d) => String(d.id) === String(id)
       );
 
-      let {
-        id: apiId, // Renombramos la variable id recibida de la API
-        name,
-        weight,
-        height,
-        life_span,
-        temperament,
-        reference_image_id,
-      } = response.data;
-
-      return res.json({
-        id,
-        name,
-        weight: weight.metric,
-        height: height.metric,
-        life_span,
-        temperament: temperament,
-        image: `https://cdn2.thedogapi.com/images/${reference_image_id}.jpg`,
+    if (!dog) {
+      return res.status(404).json({
+        message: "Dog not found",
       });
-    } catch (err) {
-      console.error(err); // Agregar esta línea para imprimir el error real en la consola
-      res.sendStatus(500);
-      throw new Error(`Error al obtener la raza de la API: ${err.message}`);
     }
+
+    return res.status(200).json(dog);
+  } catch (err) {
+    console.error("Error getting dog:", err);
+
+    return res.status(500).json({
+      message: "Internal server error",
+      error: err.message,
+    });
   }
 });
 
