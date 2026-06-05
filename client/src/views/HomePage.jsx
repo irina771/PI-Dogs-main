@@ -49,8 +49,10 @@ const HomePage = () => {
   return (
     <div className={styles.background}>
       <nav className={styles.nav}>
-        <div>
+        <div className={styles.navLeft}>
           <SearchBar setCurrentPage={setCurrentPage}/>
+        </div>
+        <div className={styles.navCenter}>
           <Link to="/createDog">
             <button className={styles.btn}>Crear Perrito</button>
           </Link>
@@ -63,7 +65,7 @@ const HomePage = () => {
           Home
         </button>
         </div>
-        <div>
+        <div className={styles.navRight}>
           <Filter2 setCurrentPage={setCurrentPage} />
           <Filter1 setCurrentPage={setCurrentPage} />
           <Filter3 setCurrentPage={setCurrentPage} />
@@ -74,7 +76,9 @@ const HomePage = () => {
       <div className={`${styles.card} ${styles.cardContainer}`}>
         {/* cambiamos al current para que aparezcan los que quiero */}
         {currentDog.length === 0 ? (
-          <img className={styles.image} alt="No hay perritos"></img>
+          <div className={styles.loadingContainer}>
+            <span className={styles.loader}></span>
+          </div>
         ) : (
           currentDog.map((c) => {
             return (
@@ -84,7 +88,7 @@ const HomePage = () => {
                     name={c.name}
                     image={c.image}
                     weight={c.weight}
-                    temperament={c.temperaments}
+                    temperaments={c.temperaments}
                   />
                 </Link>
               </div>
