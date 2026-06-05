@@ -142,7 +142,7 @@ const CreateDog = () => {
         <div className={styles.FormContainer} create={create}>
           {!create ? ( 
             // si el estado create es falso dice crea sino perro creado
-            <h2 className={styles.titulo}>CREA A TU PERRITO!</h2>
+            <h2 className={styles.titulo}>CREA TU PERRITO!</h2>
           ) : (
             
             <h2>DOG HAS BEEN CREATED SUCCESSFULLY</h2>
@@ -224,7 +224,7 @@ const CreateDog = () => {
               autoComplete='off'
             />
             <br />
-            <p>Temperamentos:</p>
+            <p className={styles.label}>Temperamentos:</p>
             <select name="temperaments" onChange={handleTemperaments}>
               <option value="default">Elegir</option>
               {tempForm?.map((item) => (
@@ -239,7 +239,7 @@ const CreateDog = () => {
                 
              <button onClick={(e) => handleSubmit(e)} className={styles.crear} type="submit">Crear</button>
               ) : (
-                <Link onClick={() => dispatch(getDogs())} to="/home">
+                <Link onClick={() => dispatch(getDogs())} to="/home" className={styles.crear}>
                   REGRESA A HOME
                 </Link>
               )}

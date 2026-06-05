@@ -8,6 +8,13 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-text:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .letraTitulo {
@@ -76,9 +83,6 @@ img {
   -webkit-box-orient: vertical;
 }
 
-.card-text:hover * {
-  color: rgb(247, 114, 158);
-}
 
 /* Responsive para tablets y pantallas medianas */
 @media only screen and (max-width: 1280px) {
