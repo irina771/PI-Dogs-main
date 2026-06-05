@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b0e7f214.css",
+    "main.js": "/static/js/main.f7d762e7.js",
+    "static/js/453.eca5f793.chunk.js": "/static/js/453.eca5f793.chunk.js",
+    "static/media/perroTriste.webp": "/static/media/perroTriste.011947480e8b5fbd838c.webp",
+    "static/media/dogLanding.jpg": "/static/media/dogLanding.fb809177418816f48422.jpg",
+    "index.html": "/index.html",
+    "main.b0e7f214.css.map": "/static/css/main.b0e7f214.css.map",
+    "main.f7d762e7.js.map": "/static/js/main.f7d762e7.js.map",
+    "453.eca5f793.chunk.js.map": "/static/js/453.eca5f793.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b0e7f214.css",
+    "static/js/main.f7d762e7.js"
+  ]
+}

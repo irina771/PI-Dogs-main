@@ -25,7 +25,6 @@ export default function Filter2() {
   }, [dispatch]);
 
   function onFilterTemperament(e) {
-    console.log("Filtering by temperament:", e.target.value);
     e.preventDefault();
     dispatch(filterTemperament(e.target.value));
   }
@@ -34,7 +33,7 @@ export default function Filter2() {
     <div className={styles.filterContainer}>
       <div>
         <select  className={styles.filter} onChange={onFilterTemperament}>
-          <option value="All Temperaments" key="All Temperaments">
+          <option value="" disabled selected>
             Ordenar por Temperamentos
           </option>
           {temperamentsOrder.map((el, index) => (

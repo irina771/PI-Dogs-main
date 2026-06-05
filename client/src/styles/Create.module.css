@@ -6,7 +6,6 @@ body{
 .FormContainer {
     background-color: #e48ab4;
     border: 2px solid #f3ddddc2;
-    padding: 20px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -14,45 +13,52 @@ body{
     position: absolute;
     height: 80%;
     width: 60%;
-    left: 18%;
+    left: 20%;
     border-radius: 30px;
 }
 
 .titulo {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     font-size: 3rem;
     font-family:sans-serif;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .label{
     margin-bottom: 0vw;
     padding-top: 1em;
+    font-size: 1.5vw;
+    font-family: 'Georgia', serif;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.808);
+    
 }
 
 .btnHome {
-    margin-bottom: 2vw;
-    margin-top: 1vw;
-    font-size: 1.2vw;
+    font-size: 1.5vw;
     padding: 0.5vw 1vw;
     cursor: pointer;
     color: rgb(255, 255, 255);
     background-color: rgb(184, 79, 114);
     border: none;
     border-radius: 10px;
+    margin-top: 30px;
+    margin-left: 50px;
 }
 .temperaments {
-   cursor: pointer;
+    cursor: pointer;
     color: rgb(255, 255, 255);
     background-color: rgb(184, 79, 114);
     border: none;
+    padding: 0.5vw 1vw;
     border-radius: 10px;
 }
 
-
 .crear {
-    margin-bottom: -20px;
+    margin-bottom: 50px;
     margin-top: 1vw;
-    font-size: 1.0vw;
+    font-size: 1.5vw;
     padding: 0.5vw 1vw;
     cursor: pointer;
     color: rgb(255, 255, 255);

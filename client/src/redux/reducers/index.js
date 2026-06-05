@@ -3,8 +3,9 @@
 const initialState = {
   dogs: [],
   temperaments: [],
-  error: {},
   dogDetail: {},
+  loading: false,
+  error: null,
   currentPage: 1,
   allDogs: [],
   filteredDogs: [],
@@ -22,12 +23,6 @@ function rootReducer(state = initialState, action) {
       return {
         ...state,
         temperaments: action.payload,
-      };
-
-    case "GET_DETAIL":
-      return {
-        ...state,
-        dogDetail: action.payload,
       };
 
     case "GET_BY_NAME":
@@ -126,20 +121,35 @@ function rootReducer(state = initialState, action) {
           ...state,
           dogs: sortedDogs,
         };
-      
-      case "POST_DOG":
-        return {
-          ...state,
+    case "GET_DETAIL_ERROR":
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+        dogDetail: {},
+      };
+    case "GET_DETAIL":
+       console.log("PAYLOAD REDUCER:", action.payload);
+      return {
+       ...state,
+      loading: false,
+      error: null,
+      dogDetail: action.payload,
+      };
+    case "POST_DOG":
+      return {
+        ...state,
         };
     case "LOADING":
       return {
         ...state,
         loading: true,
+        error: null,
       };
     case "CLEAN":
       return {
         ...state,
-        dogDetail: [],
+        dogDetail: {},
       };
 
     default:

@@ -11,15 +11,13 @@ export function getDogs() {
         return dispatch({
             type: 'GET_DOGS',
             payload: dog.data
-           
+          
         })
-    } catch (error) {
-        console.log(error);
-    }
-
+      } catch (error) {
+        alert(error);
+      }
+  };
 }
-}
-
 
 export function getTemperaments() {
   return async function (dispatch) {
@@ -51,17 +49,25 @@ export const getByName = (name)=> async dispatch => {
 
 export const getDetail = (id) => {
   return async function (dispatch) {
+      dispatch({ type: "LOADING" });
+
     try {
-      const dogDetail = await axios.get(`http://localhost:3001/dogs/${id}`);
+      const dogDetail = await axios.get(
+        `http://localhost:3001/dogs/${id}`
+      );
       dispatch({
         type: "GET_DETAIL",
         payload: dogDetail.data,
       });
     } catch (error) {
-      console.log(error);
+    dispatch({
+      type: "GET_DETAIL_ERROR",
+      payload: error.message,
+    });
+
     }
   };
-};
+}
 
 
 

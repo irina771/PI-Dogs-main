@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/cardComponent.css";
+import "../styles/cardComponent.css";
 
 export default function Card({ name, image, temperaments, weight }) {
   console.log(image);
