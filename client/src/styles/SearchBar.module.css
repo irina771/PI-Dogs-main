@@ -4,7 +4,6 @@
   border-radius: 4px;
   padding: 20px;
   position: relative;
-  right: 142%;
   bottom: 8px;
   padding-left: 20px;
 }
@@ -40,7 +39,6 @@
     margin-top: 10px;
     margin-left: 5px;
     padding: 10px;
-    right: 119.2%;
   }
   
   .searchBar input {

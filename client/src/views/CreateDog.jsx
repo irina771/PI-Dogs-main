@@ -214,12 +214,12 @@ const CreateDog = () => {
               onChange={handleChange}
             />
             {errors.life_span ? <label>{errors.life_span}</label> : null} <br />
-            <div className={styles.label}>Imagen (url):</div>
+            <div className={styles.label}>Imagen (URL):</div>
             <input
               name="image"
               value={completed.image}
-              placeholder="Pon una URL"
-              type="text"
+              placeholder="Ejemplo: https://example.com/dog.jpg"
+              type="url"
               onChange={handleChange}
               autoComplete='off'
             />

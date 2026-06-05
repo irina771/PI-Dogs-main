@@ -1,7 +1,6 @@
 .filterContainer {
     display: inline-block;
     position: relative;
-    right: 181%;
     top: 64%;
   }
   
@@ -19,11 +18,11 @@
     position: relative;
       display: inline-block;
       margin-bottom: 0px;
-      right: 151%;
     }
     
-    .filter {
-
+    .filter {      
+      display: flex;
+      background-color: rgb(255, 230, 239);
       text-align: center;
       border-radius: 6px;
       padding: 2px;
