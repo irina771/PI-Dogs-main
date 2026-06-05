@@ -2,6 +2,6 @@
   "buildCommand": "npm install && npm run build",
   "outputDirectory": "build",
   "framework": "react",
-  "nodeVersion": "18.x",
+  "nodeVersion": "24.x",
   "env": {}
 }
