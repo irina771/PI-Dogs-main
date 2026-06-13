@@ -16,7 +16,6 @@ server.use(bodyParser.json({ limit: '50mb' }));
 server.use(cookieParser());
 server.use(morgan('dev'));
 
-// Servir archivos estáticos
 server.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 
 server.use((req, res, next) => {
