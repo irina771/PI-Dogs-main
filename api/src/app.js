@@ -20,13 +20,10 @@ server.use(morgan('dev'));
 server.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 
 server.use((req, res, next) => {
-  const allowedOrigins = [
-    'http://localhost:3000',
-    'https://pi-dogs-main-9z1d.vercel.app',
-    'https://pi-dogs-main-axspjodkg-irina771s-projects.vercel.app'
-  ];
   const origin = req.headers.origin;
-  if (allowedOrigins.includes(origin)) {
+  const allowed = /https:\/\/pi-dogs-main.*\.vercel\.app$/;
+  
+  if (origin === 'http://localhost:3000' || allowed.test(origin)) {
     res.header('Access-Control-Allow-Origin', origin);
   }
   res.header('Access-Control-Allow-Credentials', 'true');
