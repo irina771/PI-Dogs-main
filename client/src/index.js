@@ -1,15 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import axios from 'axios';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Provider} from 'react-redux';
 import {store} from './redux/store/index';
+axios.defaults.baseURL = 'https://pi-dogs-main-9z1d.vercel.app/';
 
 ReactDOM.render(
 
   <Provider store={store}>
-       <React.StrictMode>
+      <React.StrictMode>
     <App />
   </React.StrictMode>
   </Provider>,

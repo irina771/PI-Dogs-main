@@ -5,19 +5,25 @@ const path = require('path');
 const pg = require('pg');
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME } = process.env;
 
-const sequelize = new Sequelize(
-  `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME || 'dogs'}`,
-  {
-    logging: false,
-    native: false,
-    dialectOptions: process.env.NODE_ENV === 'production' ? {
-      ssl: {
-        require: true,
-        rejectUnauthorized: false
+const sequelize = process.env.DATABASE_URL
+  ? new Sequelize(process.env.DATABASE_URL, {
+      logging: false,
+      native: false,
+      dialectOptions: {
+        ssl: {
+          require: true,
+          rejectUnauthorized: false
+        }
       }
-    } : {}
-  }
-);
+    })
+  : new Sequelize(
+      `postgres://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}/${process.env.DB_NAME || 'dogs'}`,
+      {
+        logging: false,
+        native: false,
+      }
+    );
+
 const basename = path.basename(__filename);
 
 const modelDefiners = [];
