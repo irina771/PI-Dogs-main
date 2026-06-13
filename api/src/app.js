@@ -18,8 +18,17 @@ server.use(morgan('dev'));
 
 // Servir archivos estáticos
 server.use('/uploads', express.static(path.join(__dirname, '../uploads')));
+
 server.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'http://localhost:3000'); // update to match the domain you will make the request from
+  const allowedOrigins = [
+    'http://localhost:3000',
+    'https://pi-dogs-main-9z1d.vercel.app',
+    'https://pi-dogs-main-axspjodkg-irina771s-projects.vercel.app'
+  ];
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.header('Access-Control-Allow-Origin', origin);
+  }
   res.header('Access-Control-Allow-Credentials', 'true');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
