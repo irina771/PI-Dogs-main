@@ -7,7 +7,7 @@ const LandingPage = () => {
       <div className="container">
       <div className="overlay"></div>
       <div className="contenedor">
-        <h1 id="h1Bienvenida">¡Bienvenido a nuestra página PI HENRY PROYECT!</h1>
+        <h1 id="h1Bienvenida">¡Bienvenido a mi página PI HENRY PROYECT!</h1>
         <p id="pBienvenida">
         Estamos emocionados de ayudarte a encontrar a tu nuevo compañero peludo.
         </p>
